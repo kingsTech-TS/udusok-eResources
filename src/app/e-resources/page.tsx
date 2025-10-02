@@ -393,6 +393,7 @@ const categories = [
 ]
 
 export default function EResourcesPage() {
+    const [open, setOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState("All")
   const [searchTerm, setSearchTerm] = useState("")
 
@@ -420,45 +421,74 @@ export default function EResourcesPage() {
         style={{ scaleX }}
       />
 
-      {/* Header */}
-      <motion.header
-        className="bg-green-900/90 backdrop-blur-md border-b border-emerald-500/50 sticky top-0 z-40 shadow-md"
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
-          <Link href="/" className="flex items-center space-x-3">
-            {/* Logo */}
+    <motion.header
+      className="bg-green-900/90 backdrop-blur-md border-b border-emerald-500/50 sticky top-0 z-40 shadow-md"
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+        {/* Logo and University Name */}
+        <Link href="/" className="flex items-center space-x-3">
+          <motion.div
+            className="flex items-center cursor-pointer"
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+          >
+            <img
+              src="/logo/udusok.png"
+              alt="Logo"
+              className="h-12 object-contain drop-shadow-lg"
+            />
+          </motion.div>
+
+          <span className="text-lg font-semibold text-white">
+            Usmanu Danfodiyo University
+          </span>
+        </Link>
+
+        {/* Dropdown Button */}
+        <div className="relative">
+          <Button
+            onClick={() => setOpen(!open)}
+            className="text-xs sm:text-sm italic tracking-wide
+                       bg-emerald-600 text-white px-3 sm:px-4 py-2 rounded-lg 
+                       shadow-sm hover:bg-green-700 transition-colors w-fit"
+          >
+            Quick Links
+          </Button>
+
+          {/* Dropdown Menu */}
+          {open && (
             <motion.div
-              className="flex items-center cursor-pointer"
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              initial={{ opacity: 0, y: -10, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -10, scale: 0.95 }}
+              transition={{ duration: 0.2 }}
+              className="absolute right-0 mt-2 w-48 bg-green-800 border border-emerald-500/50 
+                         rounded-lg shadow-lg z-50"
             >
-              <img
-                src="/logo/udusok.png"
-                alt="Logo"
-                className="h-12 object-contain drop-shadow-lg"
-              />
+              {[
+                { name: "University Website", link: "https://www.udusok.edu.ng/" },
+                { name: "Library Website", link: "/" },
+                { name: "IR", link: "https://ir.sternhost.com/" },
+              ].map((item) => (
+                <a
+                  key={item.name}
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setOpen(false)}
+                  className="block px-4 py-2 text-sm text-white hover:bg-green-700"
+                >
+                  {item.name}
+                </a>
+              ))}
             </motion.div>
-
-            {/* University Name */}
-            <span className="text-lg font-semibold text-white">
-              Usmanu Danfodiyo University
-            </span>
-          </Link>
-
-          <a href="https://e-library.adin-u.com/" target="_blank" rel="noopener noreferrer">
-            <Button
-              className="text-xs sm:text-sm italic tracking-wide
-                            bg-emerald-600 text-white px-3 sm:px-4 py-2 rounded-lg 
-                            shadow-sm hover:bg-green-700 transition-colors w-fit"
-            >
-              Back to <span className="font-medium">Home</span>
-            </Button>
-          </a>
+          )}
         </div>
-      </motion.header>
+      </div>
+    </motion.header>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Hero Section */}
