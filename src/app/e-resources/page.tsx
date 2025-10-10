@@ -321,32 +321,32 @@ const databases = [
     color: "from-green-600 to-green-700",
     stats: { programs: 5, institutions: "10,000+", countries: "120+" },
   },
-  // {
-  //     id: 22,
-  //     name: "Ajol",
-  //     category: "African Journals",
-  //     description:
-  //         "African Journals Online (AJOL) hosts peer-reviewed academic journals from Africa, focused on African research across a wide range of disciplines.",
-  //     features: ["Open access journals", "African-focused content", "Health and social sciences", "Search and browse tools"],
-  //     subjects: ["Health", "Agriculture", "Social Sciences", "African Studies"],
-  //     logo: "AJOL.png",
-  //     url: "/restricted",
-  //     color: "from-yellow-600 to-yellow-700",
-  //     stats: { journals: "500+", countries: "30+", disciplines: "10+" }
-  // },
-  // {
-  //     id: 23,
-  //     name: "EBSCO",
-  //     category: "Multidisciplinary",
-  //     description:
-  //         "A comprehensive research platform offering access to academic journals, magazines, books, and other resources across disciplines like biology, chemistry, engineering, physics, psychology, and religion.",
-  //     features: ["Full-text journals", "Searchable databases", "Academic ebooks", "Research alerts"],
-  //     subjects: ["Biology", "Chemistry", "Engineering", "Physics", "Psychology", "Religion"],
-  //     logo: "EBSCO.png",
-  //     url: "/restricted",
-  //     color: "from-blue-500 to-blue-600",
-  //     stats: { articles: "15M+", journals: "2,000+", ebooks: "300k+" }
-  // },
+  {
+      id: 22,
+      name: "Ajol",
+      category: "African Journals",
+      description:
+          "African Journals Online (AJOL) hosts peer-reviewed academic journals from Africa, focused on African research across a wide range of disciplines.",
+      features: ["Open access journals", "African-focused content", "Health and social sciences", "Search and browse tools"],
+      subjects: ["Health", "Agriculture", "Social Sciences", "African Studies"],
+      logo: "AJOL.png",
+      url: "https://www.ajol.info/index.php/ajol",
+      color: "from-yellow-600 to-yellow-700",
+      stats: { journals: "500+", countries: "30+", disciplines: "10+" }
+  },
+  {
+      id: 23,
+      name: "EBSCO",
+      category: "Multidisciplinary",
+      description:
+          "A comprehensive research platform offering access to academic journals, magazines, books, and other resources across disciplines like biology, chemistry, engineering, physics, psychology, and religion.",
+      features: ["Full-text journals", "Searchable databases", "Academic ebooks", "Research alerts"],
+      subjects: ["Biology", "Chemistry", "Engineering", "Physics", "Psychology", "Religion"],
+      logo: "EBSCO.png",
+      url: "/restricted",
+      color: "from-blue-500 to-blue-600",
+      stats: { articles: "15M+", journals: "2,000+", ebooks: "300k+" }
+  },
   {
     id: 24,
     name: "DOAB",
@@ -373,6 +373,225 @@ const databases = [
     color: "from-purple-600 to-pink-900",
     stats: { journals: "20,000+", countries: "130+", disciplines: "15+" },
   },
+  {
+  id: 26,
+  name: "Dietetics Academy",
+  category: "Nutrition / Dietetics Resource",
+  description:
+    "Dietetics Academy offers a comprehensive, topic-wise collection of dietetics notes and resources across core nutrition, food science, public & clinical nutrition, and related subjects.",
+  features: [
+    "Topic-wise dietetics notes",
+    "Searchable content",
+    "Wide subject coverage (nutrition, food safety, research, etc.)",
+    "Free educational resource"
+  ],
+  subjects: [
+    "Nutritional Biochemistry",
+    "Food Science & Safety",
+    "Public & Clinical Nutrition",
+    "Research in Dietetics"
+  ],
+  logo: "Diet.PNG",
+  url: "https://dietetics.academy/",
+  color: "from-green-500 to-green-600",
+  stats: {
+    articles: "800+",
+    subjects: "9+",
+     books: "N/A",
+  }
+},
+{
+  id: 27,
+  name: "Socio Health",
+  category: "Health / Social Health Resource",
+  description:
+    "Socio Health is a platform focused on social determinants of health, equity, and related social-health issues.",
+  features: [
+    "Content on social determinants of health",
+    "Social health & equity focus",
+    "Articles / policy / research content",
+    "Resource on social & health intersection"
+  ],
+  subjects: [
+    "Social Determinants of Health",
+    "Health Equity",
+    "Public Health",
+    "Social Policy"
+  ],
+  logo: "Soc.PNG",
+  url: "https://socio.health/",
+  color: "from-blue-400 to-blue-600",
+  stats: {
+    articles: "1272",
+    subjects: "10",
+    courses: "37+"
+  }
+},
+{
+  id: 28,
+  name: "Free Medical Journals",
+  category: "Open Access Journal Aggregator",
+  description:
+    "Free Medical Journals (by Amedeo) provides free access / listings to over 4,000 medical journals, with alerts and journal updates. :contentReference[oaicite:0]{index=0}",
+  features: [
+    "Free access / listings to many medical journals",
+    "Daily updates on new journals",
+    "Journal alert / subscription service",
+    "Aggregated indexing"
+  ],
+  subjects: [
+    "Medicine",
+    "Clinical Health",
+    "Medical Research",
+    "Biomedical Sciences"
+  ],
+  logo: "free+.png",
+  url: "https://www.freemedicaljournals.com/",
+  color: "from-red-500 to-red-600",
+  stats: {
+    journals: "4000+",
+    updateFrequency: "Daily",
+    contentType: "Aggregator"
+  }
+},
+{
+  id: 29,
+  name: "HINARI",
+  category: "Health Research Access Program",
+  description:
+    "HINARI (Health InterNetwork Access to Research Initiative) provides access to thousands of journals, books, and databases in biomedical and health sciences for institutions in low- and middle-income countries.",
+  features: [
+    "Access to thousands of health journals and e-books",
+    "Covers biomedical, nursing, and related sciences",
+    "Supports health institutions in developing countries",
+    "Part of the Research4Life partnership"
+  ],
+  subjects: [
+    "Medicine",
+    "Public Health",
+    "Biomedical Sciences",
+    "Clinical Research"
+  ],
+  logo: "Hin.PNG",
+  url: "https://www.research4life.org/about/programs/hinari/",
+  color: "from-teal-500 to-teal-600",
+  stats: {
+    journals: "16,000+",
+    books: "63,000+",
+    contentType: "Health"
+  }
+},
+{
+  id: 30,
+  name: "AGORA",
+  category: "Agricultural Research Access Program",
+  description:
+    "AGORA (Access to Global Online Research in Agriculture) provides access to scientific research in agriculture, food, nutrition, environment, and related biological and social sciences for developing countries.",
+  features: [
+    "Thousands of journals and e-books in agriculture and food science",
+    "Supports agricultural and environmental research",
+    "FAO-managed under Research4Life",
+    "Access for developing country institutions"
+  ],
+  subjects: [
+    "Agriculture",
+    "Food Science",
+    "Environmental Science",
+    "Nutrition"
+  ],
+  logo: "Goa.PNG",
+  url: "https://www.fao.org/agora/",
+  color: "from-green-500 to-green-600",
+  stats: {
+    journals: "Thousands",
+    books: "Thousands",
+    contentType: "Agricultural"
+  }
+},
+{
+  id: 31,
+  name: "OARE",
+  category: "Environmental Research Access Program",
+  description:
+    "OARE (Online Access to Research in the Environment) offers access to research literature in environmental sciences and related disciplines, supporting sustainable development and environmental management.",
+  features: [
+    "Over 30,000 environmental journals",
+    "Access to scientific databases and reference works",
+    "Supports environmental and sustainability research",
+    "Part of the Research4Life initiative"
+  ],
+  subjects: [
+    "Environmental Science",
+    "Ecology",
+    "Sustainability",
+    "Earth Science"
+  ],
+  logo: "Oar.PNG",
+  url: "https://www.unep.org/topics/environment-under-review/digital-library/online-access-research-environment-oare",
+  color: "from-blue-500 to-blue-600",
+  stats: {
+    journals: "30,000+",
+    books: "130K+",
+    database: "20"
+  }
+},
+{
+  id: 32,
+  name: "ARDI",
+  category: "Science & Technology Research Access Program",
+  description:
+    "ARDI (Access to Research for Development and Innovation) provides access to scientific and technical literature to support research and innovation in developing countries, focusing on applied sciences and engineering.",
+  features: [
+    "Access to scientific and technical research journals",
+    "Supports innovation and development",
+    "Managed by WIPO under Research4Life",
+    "Focuses on applied science and technology"
+  ],
+  subjects: [
+    "Engineering",
+    "Technology",
+    "Applied Sciences",
+    "Innovation"
+  ],
+  logo: "Ard.PNG",
+  url: "https://www.wipo.int/en/web/ardi",
+  color: "from-orange-500 to-orange-600",
+  stats: {
+    journals: "1,000+",
+    books: "N/A",
+    publishers: "12"
+  }
+},
+{
+  id: 33,
+  name: "GOALI",
+  category: "Legal & Social Science Research Access Program",
+  description:
+    "GOALI (Global Online Access to Legal Information) provides access to academic legal information and research in law, social sciences, economics, and related disciplines for developing countries.",
+  features: [
+    "Access to legal and social science journals",
+    "Covers law, politics, economics, and philosophy",
+    "Supports education and justice sectors",
+    "Part of the Research4Life partnership"
+  ],
+  subjects: [
+    "Law",
+    "Social Sciences",
+    "Economics",
+    "Political Science"
+  ],
+  logo: "Goali.PNG",
+  url: "https://www.research4life.org/goali/",
+  color: "from-purple-500 to-purple-600",
+  stats: {
+    journals: "2,000+",
+    books: "N/A",
+    contentType: "Legal"
+  }
+},
+
+
+
 ]
 
 const categories = [
@@ -443,7 +662,7 @@ export default function EResourcesPage() {
           </motion.div>
 
           <span className="text-lg font-semibold text-white">
-            Usmanu Danfodiyo University
+            Usmanu Danfodiyo University, Sokoto
           </span>
         </Link>
 
