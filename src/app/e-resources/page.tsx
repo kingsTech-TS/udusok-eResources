@@ -445,7 +445,7 @@ const databases = [
     "Biomedical Sciences"
   ],
   logo: "free+.png",
-  url: "https://www.freemedicaljournals.com/",
+  url: "http://www.freemedicaljournals.com/",
   color: "from-red-500 to-red-600",
   stats: {
     journals: "4000+",
