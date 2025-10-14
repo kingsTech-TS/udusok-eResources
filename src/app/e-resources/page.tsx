@@ -126,8 +126,7 @@ const databases = [
   },
   // {
   //     id: 7,
-  //     name: "LawPavilion",
-  //     category: "Law & Legal Studies",
+  //     name: "LawPavilion",  //     category: "Law & Legal Studies",
   //     description:
   //         "Nigeria's premier digital and offline legal research platform, offering access to a vast repository of case law, legislation, and legal analytics — trusted by courts, law firms, and institutions.",
   //     features: ["Offline access", "Judicial precedents", "Legal analytics", "Case citation tools"],
@@ -317,7 +316,7 @@ const databases = [
     ],
     subjects: ["Health", "Agriculture", "Environment", "Innovation", "Law"],
     logo: "research.png",
-    url: "/restricted",
+    url: "https://login.research4life.org/tacgw/login.cshtml",
     color: "from-green-600 to-green-700",
     stats: { programs: 5, institutions: "10,000+", countries: "120+" },
   },
@@ -343,7 +342,7 @@ const databases = [
       features: ["Full-text journals", "Searchable databases", "Academic ebooks", "Research alerts"],
       subjects: ["Biology", "Chemistry", "Engineering", "Physics", "Psychology", "Religion"],
       logo: "EBSCO.png",
-      url: "/restricted",
+      url: "https://www.ebsco.com/",
       color: "from-blue-500 to-blue-600",
       stats: { articles: "15M+", journals: "2,000+", ebooks: "300k+" }
   },
@@ -432,7 +431,7 @@ const databases = [
   name: "Free Medical Journals",
   category: "Open Access Journal Aggregator",
   description:
-    "Free Medical Journals (by Amedeo) provides free access / listings to over 4,000 medical journals, with alerts and journal updates. :contentReference[oaicite:0]{index=0}",
+    "Free Medical Journals (by Amedeo) provides free access / listings to over 4,000 medical journals, with alerts and journal updates.",
   features: [
     "Free access / listings to many medical journals",
     "Daily updates on new journals",
@@ -590,6 +589,21 @@ const databases = [
   }
 },
 
+{
+    id: 34,
+    name: "ScienceDirect",
+    category: "Multidisciplinary / Scientific & Technical",
+    description:
+        "Elsevier’s flagship platform for scientific, technical, and medical research — offering access to peer-reviewed journals, book chapters, and more across many disciplines.",
+    features: ["Full-text journals & articles", "Book chapters & reference works", "Advanced search & filtering", "Research topic pages / insights"],
+    subjects: ["Physical Sciences", "Engineering", "Life Sciences", "Health Sciences", "Social Sciences & Humanities"],
+    logo: "sciD.PNG",
+    url: "https://www.sciencedirect.com/",
+    color: "from-green-500 to-green-600",
+    stats: { articles: "18M+", journals: "4,000+", ebooks: "30,000+" }
+}
+
+
 
 
 ]
@@ -639,6 +653,7 @@ export default function EResourcesPage() {
         className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 via-green-600 to-teal-600 origin-left z-50"
         style={{ scaleX }}
       />
+      
 
     <motion.header
       className="bg-green-900/90 backdrop-blur-md border-b border-emerald-500/50 sticky top-0 z-40 shadow-md"
